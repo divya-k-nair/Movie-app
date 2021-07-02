@@ -21,7 +21,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.amberAccent,
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: Text("MOVIE APP"),
         ),
