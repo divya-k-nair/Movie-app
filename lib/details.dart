@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:movie_app/main.dart';
 
 class Details extends StatelessWidget {
   TextEditingController mname=TextEditingController();
@@ -15,7 +16,14 @@ class Details extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SingleChildScrollView(
+    return  MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+        title: Text("MOVIE APP"),
+    ),
+    body:SingleChildScrollView(
       child: Container(
         margin: EdgeInsets.all(20),
         child: Column(
@@ -175,9 +183,30 @@ class Details extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 20,),
+            SizedBox(
+              height: 60,
+              width: double.infinity,
+              child: RaisedButton(
+                color: Colors.pinkAccent,
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>App()));
+
+              },
+                child: Text("BACK TO HOME",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                  ),
+              ),
+            ),
+            ),
           ],//children
         ),
       ),
+    ),
+        ),
     );
+
   }
 }

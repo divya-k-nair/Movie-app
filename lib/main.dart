@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:movie_app/details.dart';
+import 'package:movie_app/home.dart';
 
 void main()
 {
@@ -17,7 +18,7 @@ class App extends StatelessWidget {
         appBar: AppBar(
           title: Text("MOVIE APP"),
         ),
-        body:Details(),
+        body:Home(),
 
       ),
     );
